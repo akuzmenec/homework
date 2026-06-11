@@ -213,5 +213,73 @@ def homework_3():
             month = 1
             year += 1
     print(f"следующая дата:{day},{month},{year}")
-homework_3()
 
+def homework_4():
+
+#1
+    a = int(input())
+    b = int(input())
+    s = 0
+    if a > b:
+        a,b = b,a
+    while b > a:
+        s += a
+        a += 1
+    print(s)
+
+#2
+    c = int(input())
+    d = int(input())
+
+    if c < d:
+        n = c
+    else:
+        n = d
+
+    while n > 0:
+        if c % n == 0 and d % n == 0:
+            print(n)
+            break
+        n -= 1
+
+#3
+    num = int(input())
+    n = num
+
+    while n != 1:
+        if num % n == 0:
+            print(n)
+        n -= 1
+
+#4
+    num_1 = int(input())
+    k = 0
+    while num_1 > 0:
+        num_1 //= 10
+        k += 1
+    print(k)
+
+#5
+    e = 0
+    ne = 0
+    p = 0
+    o = 0
+    i = 0
+    z = 0
+    while i != 10:
+        num_3 = int(input())
+
+        if num_3 == 0:
+             z += 1
+        elif num_3 % 2 == 0:
+            e += 1
+        else:
+            ne += 1
+        if num_3 > 0:
+            p += 1
+        elif num_3 < 0:
+            o += 1
+        i += 1
+    print(f"положительных: {p}, отрицательных: {o}, четных: {e}, нечетных: {ne} нулей: {z}")
+
+homework_4()
