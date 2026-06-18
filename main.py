@@ -1,4 +1,6 @@
 ###HOMEWORK_1
+from tokenize import endpats
+
 from unicodedata import category
 
 
@@ -282,75 +284,122 @@ def homework_4():
         i += 1
     print(f"положительных: {p}, отрицательных: {o}, четных: {e}, нечетных: {ne} нулей: {z}")
 
-def homework_5():
+def homework_6():
 
 #1
-    # a = int(input())
-    # b = int(input())
-    # s = 0
-    # if a>b:a,b = b,a
-    # for i in range(a, b+1):
-    #     s += i
-    # print(s)
+    n = input("выберите фигуру:")
 
-#2
-    # c = int(input())
-    # d = int(input())
-    # max = 1
-    # if c>d: c,d = d,c
-    # for j in range(c, 0, -1):
-    #     if c%j == 0 and d%j == 0:
-    #         max = j
-    #     break
-    # print(max)
+    if n == "а":
+        for i in range(4, 0, -1):
+            for g in range(i):
+                print(" ", end=" ")
+            for j in range(4-i):
+                print("*", end=" ")
+            print()
 
-#3
-    # e = int(input())
-    # for g in range(1, e+1):
-    #     if e%g == 0:
-    #         print(g, end=" ")
-#4
-    # f = int(input())
-    # if f == 0:
-    #     k = 1
-    # else:
-    #     k = 0
-    #
-    # for h in range(f):
-    #
-    #     if f == 0:
-    #         break
-    #     k += 1
-    #     f //= 10
-    #
-    # print(k)
-#5
-    e = 0
-    ne = 0
-    p = 0
-    o = 0
-    i = 0
-    z = 0
-    for l in range(10):
-        num_3 = int(input())
+    elif n == "б":
+        for i in range(4):
+            for g in range(i):
+                print("*", end=" ")
+            print()
 
-        if num_3 == 0:
-            z += 1
-        elif num_3 % 2 == 0:
-            e += 1
-        else:
-            ne += 1
-        if num_3 > 0:
-            p += 1
-        elif num_3 < 0:
-            o += 1
-        i += 1
-    print(f"положительных: {p}, отрицательных: {o}, четных: {e}, нечетных: {ne} нулей: {z}")
+    elif n == "в":
+        for i in range(4, 0, -1):
+            for j in range(4-i):
+                print(" ", end="")
+            for g in range(i):
+                print("* ", end="")
+            print()
+
+    elif n == "г":
+        for i in range(1, 4+1):
+            for j in range(4-i):
+                print(" ", end="")
+            for g in range(i):
+                print("* ", end="")
+            print()
+
+    elif n == "д":
+        for i in range(4, 0, -1):
+            for j in range(4 - i):
+                print(" ", end="")
+            for g in range(i):
+                print("* ", end="")
+            print()
+
+        for i in range(1, 4 + 1):
+            for j in range(4 - i):
+                print(" ", end="")
+            for g in range(i):
+                print("* ", end="")
+            print()
 
 
+    elif n == "ж":
+
+        for i in range(5):
+            for g in range(i):
+                print("* ", end="")
+            print()
+
+        for i in range(4-1, 0, -1):
+            for g in range(i):
+                print("* ", end="")
+            print()
 
 
+    elif n == "з":
 
+
+        for i in range(1, 4+1):
+            for g in range(2*(4-i)):
+                print(" ", end="")
+            for k in range(i):
+                print("* ", end="")
+            print()
+
+        for i in range(4-1, 0, -1):
+            for g in range(2*(4-i)):
+                print(" ", end="")
+            for k in range(i):
+                print("* ", end="")
+            print()
+
+    elif n == "е":
+
+        for i in range(1,4+1):
+            for j in range(i):
+                print("* ", end="")
+            for j in range(4*(4-i)):
+                print(" ", end="")
+            for j in range(i):
+                print("* ", end="")
+            print()
+
+        for i in range(4-1, 0, -1):
+            for j in range(i):
+                print("* ", end="")
+            for g in range(4 * (4 - i)):
+                print(" ", end="")
+            for j in range(i):
+                print("* ", end="")
+            print()
+
+    elif n == "и":
+        for i in range(4, 0, -1):
+            for g in range(i):
+                print("*", end=" ")
+            print()
+
+    elif n == "к":
+        for i in range(5):
+            for g in range(i):
+                print(" ", end=" ")
+            for j in range(4 - i):
+                print("*", end=" ")
+            print()
+
+homework_6()
 
 
 
