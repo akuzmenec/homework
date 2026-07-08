@@ -40,8 +40,8 @@ print("----------")
 col_max, col_min = 0, 0
 for i in range(len(ls1[0])):
     sum1 = 0
-    max1 = ls1[i][0]
-    min1 = ls1[i][0]
+    max1 = ls1[0][i]
+    min1 = ls1[0][i]
     ind_max1, ind_min1 = 0, 0
     for j in range(len(ls1)):
         print(ls1[j][i], end="\t")
@@ -52,10 +52,10 @@ for i in range(len(ls1[0])):
         if ls1[j][i] < min1:
             min1 = ls1[j][i]
             ind_min1 = j
-        if max1 == max_all:
-            col_max = ind_max1
-        if min1 == min_all:
-            col_min = ind_min1
+    if max1 == max_all:
+        col_max = ind_max1
+    if min1 == min_all:
+        col_min = ind_min1
     print(f"|\t{sum1}(sum)\t |{sum1 / a}(a.m)\t |{max1}(max)\t |ind = {ind_max1} |{min1}(min) |ind = {ind_min1}")
 print("----------")
 
